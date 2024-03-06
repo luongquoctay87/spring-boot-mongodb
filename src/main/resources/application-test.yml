@@ -1,0 +1,25 @@
+spring:
+  config:
+    activate:
+      on-profile: test
+  data:
+    mongodb:
+      host: ${MONGODB_HOST:DUMMY-MONGODB-HOST}
+      port: ${MONGODB_PORT:DUMMY-MONGODB-PORT}
+      database: ${MONGODB_DB:DUMMY-MONGODB-DB}
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+openapi:
+  service:
+    api-docs: api-service
+    server: ${API_URL:http://test.backend.com}
+    title: API Service Documents
+    version: 1.0.0
+
+cors:
+  allow:
+    origins: http://test.frontend.com
